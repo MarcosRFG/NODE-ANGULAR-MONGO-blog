@@ -1,0 +1,19 @@
+<!-- Lista de posts -->
+<div class="mt-10" *ngFor="let post of listPosts">
+  <p-panel>
+    <p-header>
+      <div class="ui-helper-clearfix">
+        <span class="ui-panel-title" style="font-size:16px;display:inline-block;margin-top:2px">{{ post.user }}</span>
+        <span class="ui-panel-title right" style="font-size:14px;display:inline-block;margin-top:2px">{{ post.date }}</span>
+      </div>
+    </p-header>
+    <div>{{ post.message }}</div>
+  </p-panel>
+</div>
+
+<div *ngIf="listPosts.length == 0">
+  <p-fieldset legend="Poxa :(">
+      Você ainda não realizou nenhum post.
+  </p-fieldset>
+</div>
+

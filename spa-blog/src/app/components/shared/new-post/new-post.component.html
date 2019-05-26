@@ -1,0 +1,4 @@
+<textarea rows="1" cols="70" pInputTextarea autoResize="autoResize" [(ngModel)]="textPost" 
+placeholder="Compartilhe algo legal com seus amigos..."></textarea>
+<br>
+<button pButton type="button" label="Enviar post" class="ui-button-danger" (click)="sendNewPost()" [disabled]="!textPost"></button>
